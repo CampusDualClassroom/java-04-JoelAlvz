@@ -1,6 +1,7 @@
 package com.campusdual.classroom;
 
 public class Exercise04 {
+
     public static void main(String[] args) {
 
         System.out.println("Ejemplos de cálculos SIN estructuras de control:");
@@ -9,22 +10,38 @@ public class Exercise04 {
         System.out.println("Obtén el factorial del número 7 → (7!): " + (7 * 6 * 5 * 4 * 3 * 2 * 1));
         System.out.println("######################################################################");
         System.out.println("Ejemplos de cálculos CON estructuras de control:");
-
+        System.out.println(sumNum(5));
+        System.out.println(sumEvenNum(40));
+        System.out.println(factorial(6));
+        System.out.println(recursiveFactorial(6));
     }
 
+
     public static int sumNum(int num) {
-        return 0;
+        int cont=0;
+        for(int i = 0; i <= num; i++){
+            cont += i;
+        }
+        return cont;
     }
 
     public static int sumEvenNum(int num) {
-        return 0;
+        int cont = 0;
+        for(int i = 1; i <= num; i ++){
+            cont = (i * 2) + cont;
+        }
+        return cont;
     }
 
     public static int factorial(int num) {
-        return 0;
+        int cont=1;
+        for(int i = 1; i <= num; i++){
+            cont *= i;
+        }
+        return cont;
     }
 
     public static int recursiveFactorial(int num) {
-        return 0;
+            return factorial(num);
     }
 }
